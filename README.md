@@ -29,3 +29,5 @@
 4.  Move the hard-coded rootURL value from car.service.ts over to a shared constants.ts file that's accessible to other services.  Right now, it's hard to expand the application because it's only specified in car.service.ts
 
 5.  Update Front-End code to retrieve Vehicle Color options from the database rather than having it be a hard-coded value.
+
+6.  From a User Experience level, I would like to rework the Grid so that it'll show all vehicles available rather than having the User play around with filters to figure out the car inventory.  It's a lot more friendlier that way.
