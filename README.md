@@ -2,7 +2,7 @@
 
 1.  Restore the CarDealershipDB.bak file on the local machine.  I ended up using LocalDB\MSSQLLocalDB to setup the ConnectionString in the WebAPI project.
 
-2.  Open the CarDealershipWebAPI Solution.  Restore NuGet Packages.
+2.  Open the CarDealershipWebAPI Solution.  Rebuild and Restore NuGet Packages.
 
 4.  Open the Command Prompt and navigate to the 'aya-bautista-car-dealership' folder
 
