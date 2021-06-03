@@ -1,0 +1,107 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+
+  <h6>Color</h6>
+
+  <div class="form-group">
+    <select id="colorDropdown" 
+            name="Color" 
+            #Color="ngModel" 
+            [(ngModel)]="carService.filterData.Color" 
+            class="form-select form-select-md">
+      <option selected value="">Select a Color</option>
+      <option value="Black">Black</option>
+      <option value="Gray">Gray</option>
+      <option value="Red">Red</option>
+      <option value="Silver">Silver</option>
+      <option value="White">White</option>
+    </select>
+  </div>
+
+  <br>
+
+  <h6>Amenities</h6>
+
+  <div class="form-group">
+    <div class="col-lg-6">
+      <div class="form-check form-check-inline">
+        <input id="sunroofCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="HasSunroof" 
+              #HasSunroof="ngModel" 
+              [(ngModel)]="carService.filterData.HasSunroof">
+        <label class="form-check-label" for="sunroofCheckbox">Sunroof</label>
+      </div>
+    
+      <div class="form-check form-check-inline">
+        <input id="fourWheelDriveCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="IsFourWheelDrive" 
+              #IsFourWheelDrive="ngModel" 
+              [(ngModel)]="carService.filterData.IsFourWheelDrive">
+        <label class="form-check-label" for="fourWheelDriveCheckbox">Four Wheel Drive (4WD)</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input id="hasLowMilesCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="HasLowMiles" 
+              #HasLowMiles="ngModel" 
+              [(ngModel)]="carService.filterData.HasLowMiles">
+        <label class="form-check-label" for="hasLowMilesCheckbox">Low Milage</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-6">
+      <div class="form-check form-check-inline">
+        <input id="hasPowerWindowsCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="HasPowerWindows" 
+              #HasPowerWindows="ngModel" 
+              [(ngModel)]="carService.filterData.HasPowerWindows">
+        <label class="form-check-label" for="hasPowerWindowsCheckbox">Power Windows</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input id="hasNavigationCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="HasNavigation" 
+              #HasNavigation="ngModel" 
+              [(ngModel)]="carService.filterData.HasNavigation">
+        <label class="form-check-label" for="hasNavigationCheckbox">GPS Navigation</label>
+      </div>
+    
+      <div class="form-check form-check-inline">
+        <input id="hasHeatedSeatsCheckbox" 
+              type="checkbox" 
+              class="form-check-input" 
+              name="HasHeatedSeats" 
+              #HasHeatedSeats="ngModel" 
+              [(ngModel)]="carService.filterData.HasHeatedSeats">
+        <label class="form-check-label" for="hasHeatedSeatsCheckbox">Heated Seats</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-check">
+    <input id="showExactMatchesCheckbox" 
+          type="checkbox" 
+          class="form-check-input" 
+          name="ShowExactMatches" 
+          #ShowExactMatches="ngModel" 
+          [(ngModel)]="carService.filterData.ShowExactMatches">
+    <label class="form-check-label" for="showExactMatchesCheckbox">Only show exact matches?</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    Search
+  </button>
+</form>

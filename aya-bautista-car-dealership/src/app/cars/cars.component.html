@@ -1,0 +1,18 @@
+<h1 class="display-4 text-center">Welcome to Aya's Car Dealership!</h1>
+<hr>
+<div class="row">
+  <p>Use the controls below to search our inventory!</p>
+  <p>We have a diverse selection of Cars for you to choose from!</p>
+</div>
+
+<hr>
+
+<div class="row">
+  <app-car-filter></app-car-filter>
+</div>
+
+<hr>
+
+<div *ngIf="carService.gridData.length > 0" class="row">
+  <app-car-grid></app-car-grid>
+</div>
